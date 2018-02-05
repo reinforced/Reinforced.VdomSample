@@ -2,40 +2,6 @@
     //#region HTML parser entities
 
     /**
-     * HTML parser state
-     */
-    export enum State {
-        /** Awaiting content, initial state */
-        Content,
-
-        /** Skipping space characters */
-        SkipSpaces,
-
-        /** Tag opening (from initial &lt; to tag name) */
-        Tag,
-
-        /** Crunching tag name and catching its closing */
-        TagHeader,
-
-        /** Crunching attribute name */
-        AttrName,
-
-        /** Awaiting attribute value */
-        AttrValue,
-
-        /** Crunching attribute value */
-        AttrValueContent,
-
-        /** Crunching comment */
-        Comment
-    }
-
-    
-    /**
-     * Interface for nodes (DOM or VDOM) constructor
-     */
-
-    /**
      * HTML Elements parsering result
      */
     export interface IParseResult<T> {
