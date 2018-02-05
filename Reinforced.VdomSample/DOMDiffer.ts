@@ -8,8 +8,8 @@
      * Difference calculator between DOM and VDOM
      */
     export class DomDiffer {
-        public static update(e: Node, vnode: IVDOMNode[], cc: CompareCache) {
-            var lcs = new Lcs(e.childNodes as any, vnode, cc);
+        public static update(parent: Node, vnode: IVDOMNode[], cc: CompareCache) {
+            var lcs = new Lcs(parent.childNodes as any, vnode, cc);
             var modBatch = lcs.produceModifyBatch();
             var additions: IAddition[] = [];
             var removals: Node[] = [];
@@ -20,7 +20,7 @@
                 if (modBatch[i].Action === ModAction.Add) {
                     additions.push({
                         Node: modBatch[i].Node.Node,
-                        Before: e.childNodes.item(modBatch[i].Index)
+                        Before: parent.childNodes.item(modBatch[i].Index)
                     });
                 }
                 if (modBatch[i].Action === ModAction.Update) {
@@ -44,12 +44,12 @@
             }
             for (var j = 0; j < additions.length; j++) {
                 var m = Lattice.Html.Materializer.materialize(additions[j].Node);
-                if (!additions[j].Before) e.appendChild(m);
-                else e.insertBefore(m, additions[j].Before);
+                if (!additions[j].Before) parent.appendChild(m);
+                else parent.insertBefore(m, additions[j].Before);
             }
 
             for (var k = 0; k < removals.length; k++) {
-                e.removeChild(removals[k]);
+                parent.removeChild(removals[k]);
             }
         }
 
