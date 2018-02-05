@@ -71,6 +71,7 @@
     <TypeScriptCompile Include="CompareCache.ts" />
     <Content Include="index.html" />
     <TypeScriptCompile Include="IHtmlConstructor.ts" />
+    <TypeScriptCompile Include="IStateInfo.ts" />
     <TypeScriptCompile Include="Materializer.ts" />
     <TypeScriptCompile Include="Stack.ts" />
     <TypeScriptCompile Include="StreamHtmlParser.ts" />
