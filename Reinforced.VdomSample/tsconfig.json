@@ -1,0 +1,16 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es5",
+    "outFile": "vdom.js",
+    "allowJs": true
+  },
+  "exclude": [
+    "node_modules",
+    "wwwroot"
+  ]
+}

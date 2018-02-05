@@ -1,0 +1,40 @@
+﻿body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+span {
+    font-style: italic;
+}
+
+.touched {
+    -webkit-animation: pulse 2s forwards;
+    -moz-animation: pulse 2s forwards;
+    -ms-animation: pulse 2s forwards;
+    -o-animation: pulse 2s forwards;
+    animation: pulse 2s forwards;
+}
+
+
+@-moz-keyframes pulse {
+    0% { background-color: orangered; }
+    30% { background-color: #fff; }
+    60% { background-color: #fff70f; }
+    99% { background-color: #fff; }
+    100% { background-color: transparent; }
+}
+
+@-webkit-keyframes pulse {
+    0% { background-color: orangered; }
+    30% { background-color: #fff; }
+    60% { background-color: #fff70f; }
+    99% { background-color: #fff; }
+    100% { background-color: transparent; }
+}
+
+@keyframes pulse {
+    0% { background-color: orangered; }
+    30% { background-color: #fff; }
+    60% { background-color: #fff70f; }
+    99% { background-color: #fff; }
+    100% { background-color: transparent; }
+}
